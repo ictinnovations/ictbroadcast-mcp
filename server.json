@@ -1,0 +1,68 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ictinnovations/ictbroadcast-mcp",
+  "description": "Monitor ICTBroadcast outbound campaigns, and start and stop them when writes are on.",
+  "repository": {
+    "url": "https://github.com/ictinnovations/ictbroadcast-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "websiteUrl": "https://ictbroadcast.com",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "ictbroadcast-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "ICTBROADCAST_BASE_URL",
+          "description": "Base URL of your ICTBroadcast server, without the /rest suffix, e.g. https://your-ictbroadcast.",
+          "isRequired": true,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "ICTBROADCAST_USERNAME",
+          "description": "API account username.",
+          "isRequired": true,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "ICTBROADCAST_PASSWORD",
+          "description": "Password for the account.",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "ICTBROADCAST_MCP_ALLOW_WRITE",
+          "description": "Unlocks starting and stopping campaigns, which begins live outbound calling and can cost money. When false those tools are not registered at all. Leave off unless you mean it.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "ICTBROADCAST_TIMEOUT_MS",
+          "description": "Per request timeout in milliseconds. Defaults to 30000.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "number",
+          "default": "30000"
+        },
+        {
+          "name": "ICTBROADCAST_TLS_INSECURE",
+          "description": "Skip TLS certificate verification. Only for a self-signed test server.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "boolean",
+          "default": "false"
+        }
+      ]
+    }
+  ]
+}

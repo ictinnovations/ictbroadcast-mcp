@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "ictbroadcast": {
+      "command": "npx",
+      "args": ["-y", "ictbroadcast-mcp"],
+      "env": {
+        "ICTBROADCAST_BASE_URL": "https://your-ictbroadcast",
+        "ICTBROADCAST_USERNAME": "admin",
+        "ICTBROADCAST_PASSWORD": "your-password"
+      }
+    }
+  }
+}
