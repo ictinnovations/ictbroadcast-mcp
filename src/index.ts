@@ -25,7 +25,7 @@ try {
 if (cfg.tlsInsecure) process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 const server = new McpServer(
-  { name: "ictbroadcast-mcp", version: "0.1.0" },
+  { name: "ictbroadcast-mcp", version: "0.1.1" },
   {
     instructions:
       "Monitor and control outbound campaigns on an ICTBroadcast server. Start with " +
